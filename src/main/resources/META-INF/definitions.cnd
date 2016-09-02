@@ -1,0 +1,26 @@
+<jmix = 'http://www.jahia.org/jahia/mix/1.0'>
+<jnt = 'http://www.jahia.org/jahia/nt/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+
+[jnt:twitterpointFactoryForm] > jnt:content, jmix:siteComponent, jmix:studioOnly, mix:title
+
+[jnt:twitterTweet] > jnt:content, jmix:structuredContent, jmix:studioOnly
+ - id (string) hidden
+ - text (string) protected
+ - name (string) protected
+ - profile_image_url (string) protected
+ - screen_name (string) protected
+ - created_at (string) protected
+
+[jnt:twitterMountPointFactoryPage] > jnt:content, jmix:mountPointFactory, jmix:siteComponent, jmix:studioOnly, mix:title
+
+[jnt:twitterView] > jnt:content, jmix:structuredContent
+
+[jnt:twitterMountPoint] > jnt:mountPoint
+ - consumerKey (string) mandatory indexed=no nofulltext
+ - consumerSecret (string) mandatory indexed=no nofulltext
+ - accessToken (string) mandatory indexed=no noqueryorder nofulltext
+ - accessTokenSecret (string) mandatory indexed=no noqueryorder nofulltext
+ - search (string) mandatory indexed=no noqueryorder nofulltext
+ - numberTweets (string) mandatory indexed=no noqueryorder nofulltext
+
