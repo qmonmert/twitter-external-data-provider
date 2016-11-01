@@ -118,4 +118,20 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>jahia-ippon</id>
+            <properties>
+                <jahia.deploy.targetServerDirectory>/Users/qmonmert/Documents/Ippon/Jahia/tomcat</jahia.deploy.targetServerDirectory>
+                <jahia.deploy.targetServerVersion>7</jahia.deploy.targetServerVersion>
+                <jahia.deploy.war.contextPath>/</jahia.deploy.war.contextPath>
+                <jahia.deploy.targetServerType>tomcat</jahia.deploy.targetServerType>
+                <jahia.debug.address>socket:hostname=localhost,port=8000</jahia.debug.address>
+                <jahia.deploy.war.dirName>ROOT</jahia.deploy.war.dirName>
+                <jahia.deploy.war.servletPath>/cms</jahia.deploy.war.servletPath>
+            </properties>
+        </profile>
+    </profiles>
+    
 </project>
