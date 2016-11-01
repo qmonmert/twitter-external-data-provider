@@ -18,8 +18,13 @@
 <%--@elvariable id="currentResource" type="org.jahia.services.render.Resource"--%>
 <%--@elvariable id="url" type="org.jahia.services.render.URLGenerator"--%>
 
-    <jcr:sql var="query" sql='SELECT * FROM [jnt:twitterTweet]'/>
-    <c:forEach items="${query.nodes}" var="items">
-        ${items.properties["screen_name"].string}, ${items.properties["text"].string}
-        <br><br>
-    </c:forEach>
+<jcr:sql var="query" sql='SELECT * FROM [jnt:twitterTweet]'/>
+
+<c:forEach items="${query.nodes}" var="item" varStatus="status">
+    <span style="color:red;">Tweet ${status.index + 1} :</span>
+    <br>
+    ${item.properties["screen_name"].string} says :
+    <br>
+    ${item.properties["text"].string}
+    <hr>
+</c:forEach>
